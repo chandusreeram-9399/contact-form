@@ -2,8 +2,7 @@ import speech_recognition as sr
 import pyttsx3
 import pywhatkit
 import datetime
-import wikipedia
-import pyjokes
+
 
 listener=sr.Recognizer()
 engine=pyttsx3.init()
@@ -42,11 +41,7 @@ def run_alexa():
           time=datetime.datetime.now().strftime('%I:%M:%P')
           print(time)
           talk('current time is'+time)
-    elif 'wikipedia' in command:
-        person=command.replace('wikipedia','') 
-        info=wikipedia.summary(person,5) 
-        print(info)  
-        talk(info)
+   
     elif 'date' in command:
         talk("sorry,i have an headache")
     elif 'are you single' in  command:
